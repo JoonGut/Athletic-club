@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+
+header {
+    background-color:  #f4f4f4;
+    color: black;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo h1 {
+    font-size: 28px;
+}
+
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #c8102e;
+}
+
+/* eslogan */
+
+.eslogan {
+    background: linear-gradient(rgba(200,16,46,0.8), rgba(200,16,46,0.8)),
+                url("https://cdn.athletic-club.eus/uploads/2023/08/20230312_MAS_LIG_25_ATHvsFCB%20N0055.jpg") center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.eslogan h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.eslogan p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.eslogan button {
+    padding: 12px 25px;
+    border: none;
+    background-color: white;
+    color: #c8102e;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.eslogan button:hover {
+    background-color: black;
+    color: white;
+}
+
+/* noticias */
+
+.noticias {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.noticias h2 {
+    margin-bottom: 40px;
+    font-size: 28px;
+}
+
+.cartas {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.carta {
+    background-color: white;
+    padding: 20px;
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.carta:hover {
+    transform: translateY(-5px);
+}
+
+.carta h3 {
+    margin-bottom: 15px;
+    color: #c8102e;
+}
+
+.carta a {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #c8102e;
+    font-weight: bold;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
