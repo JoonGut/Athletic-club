@@ -45,7 +45,8 @@
                 <h3>Nueva promesa de Lezama</h3>
                 <p>El club apuesta fuerte por el talento joven.</p>
                 <a href="#">Leer más</a>
-            </div>
+            </div>3
+            
 
             <div class="carta">
                 <h3>Próximo Derbi Vasco</h3>
