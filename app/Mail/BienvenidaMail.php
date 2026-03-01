@@ -37,7 +37,7 @@ class BienvenidaMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'view.bienvenida',  // Aquí debes especificar la vista que deseas usar para el correo
+            view: 'emails.bienvenida'
         );
     }
 
