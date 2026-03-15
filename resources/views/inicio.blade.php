@@ -19,7 +19,7 @@
             <ul>
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">Plantilla</a></li>
-                <li><a href="#">Socios</a></li>
+                <li><a href="{{ url('/login') }}">Socios</a></li>
                 <li><a href="#">Tienda</a></li>
             </ul>
         </nav>
@@ -36,22 +36,25 @@
 
         <div class="cartas">
             <div class="carta">
-                <h3>Victoria en San Mamés</h3>
-                <p>Gran partido del equipo ante su afición en La Catedral.</p>
-                <a href="#">Leer más</a>
+                <h3>Tour por el nuestra historia</h3>
+                <img src="{{ asset('images/museoathletic.webp') }}" alt="Museo Athletic Club" width="60">
+                <p>Tour por el museo del Athletic Club</p>
+                <a href="https://www.athletic-club.eus/entradas/museo-tour/?utm_source=google-ads&utm_medium=cpc&utm_campaign=ticketing-museo&utm_content=euskadi&gad_source=1&gad_campaignid=15387496283">Leer más</a>
             </div>
 
             <div class="carta">
                 <h3>Nueva promesa de Lezama</h3>
+                <img src="{{ asset('images/banderaAthletic.jpg') }}" alt="Bandera Athletic Club" width="60">
                 <p>El club apuesta fuerte por el talento joven.</p>
-                <a href="#">Leer más</a>
-            </div>3
+                <a href="https://www.athletic-club.eus/equipos/lezama/">Leer más</a>
+            </div>
             
 
             <div class="carta">
-                <h3>Próximo Derbi Vasco</h3>
-                <p>Preparados para un duelo emocionante.</p>
-                <a href="#">Leer más</a>
+                <h3>Unique in the world</h3>
+                 <img src="{{ asset('images/uniqueInTheWorld.jpg') }}" alt="Unique in the world" width="60">
+                <p>Un club con una filosofia unica</p>
+                <a href="https://contenidos.athletic-club.eus/unique-in-the-world">Leer más</a>
             </div>
         </div>
     </section>
