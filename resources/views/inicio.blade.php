@@ -36,7 +36,7 @@
 
         <div class="cartas">
             <div class="carta">
-                <h3>Tour por el nuestra historia</h3>
+                <h3>Tour por nuestra historia</h3>
                 <img src="{{ asset('images/museoathletic.webp') }}" alt="Museo Athletic Club" width="60">
                 <p>Tour por el museo del Athletic Club</p>
                 <a href="https://www.athletic-club.eus/entradas/museo-tour/?utm_source=google-ads&utm_medium=cpc&utm_campaign=ticketing-museo&utm_content=euskadi&gad_source=1&gad_campaignid=15387496283">Leer más</a>

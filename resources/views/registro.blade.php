@@ -31,22 +31,36 @@
 		<section class="registro-card">
 			<h2>Registro de usuario</h2>
 
+			@if (session('success'))
+				<div>{{ session('success') }}</div>
+			@endif
+
+			@if ($errors->any())
+				<div>
+					<ul>
+						@foreach ($errors->all() as $error)
+							<li>{{ $error }}</li>
+						@endforeach
+					</ul>
+				</div>
+			@endif
+
 			<form class="registro-form" method="POST" action="{{ route('register.socios') }}">
 				@csrf
 
 				<div>
 					<label for="nombre">Nombre completo</label>
-					<input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+					<input type="text" id="nombre" name="nombre" value="{{ old('nombre') }}" placeholder="Tu nombre" required>
 				</div>
 				<div>
 					<label for="usuario">Nombre de usuario</label>
-					<input type="text" id="usuario" name="usuario" placeholder="Tu nombre de usuario" required>
+					<input type="text" id="usuario" name="usuario" value="{{ old('usuario') }}" placeholder="Tu nombre de usuario" required>
 				</div>
 
 
 				<div>
 					<label for="email">Correo electrónico</label>
-					<input type="email" id="email" name="email" placeholder="tuemail@correo.com" required>
+					<input type="email" id="email" name="email" value="{{ old('email') }}" placeholder="tuemail@correo.com" required>
 				</div>
 
 				<div>

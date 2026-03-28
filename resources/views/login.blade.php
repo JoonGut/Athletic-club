@@ -31,11 +31,25 @@
 		<section class="registro-card">
 			<h2>Inicio de sesión</h2>
 
-			<form class="registro-form" method="POST" action="{{ url('/register') }}">
+			@if (session('success'))
+				<div>{{ session('success') }}</div>
+			@endif
+
+			@if ($errors->any())
+				<div>
+					<ul>
+						@foreach ($errors->all() as $error)
+							<li>{{ $error }}</li>
+						@endforeach
+					</ul>
+				</div>
+			@endif
+
+			<form class="registro-form" method="POST" action="{{ route('login.socios') }}">
 				@csrf
 				<div>
 					<label for="email">Correo electrónico</label>
-					<input type="email" id="email" name="email" placeholder="tuemail@correo.com" required>
+					<input type="email" id="email" name="email" value="{{ old('email') }}" placeholder="tuemail@correo.com" required>
 				</div>
 
 				<div>

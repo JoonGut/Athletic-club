@@ -19,6 +19,7 @@ Route::post('/register', [RegistroController::class, 'socios'])->name('register.
 Route::get('/login', function () {
     return view('login');
 });
+Route::post('/login', [RegistroController::class, 'login'])->name('login.socios');
 Route::get('/test-mail', function () {
     Mail::to('dam3.jon.gutierrez@gmail.com')->send(new BienvenidaMail());
     return 'Correo enviado';
