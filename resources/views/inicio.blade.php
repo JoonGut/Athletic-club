@@ -18,9 +18,9 @@
         <nav>
             <ul>
                 <li><a href="#">Inicio</a></li>
-                <li><a href="#">Plantilla</a></li>
+                <li><a href="{{ url('/login') }}">Plantilla</a></li>
                 <li><a href="{{ url('/login') }}">Socios</a></li>
-                <li><a href="#">Tienda</a></li>
+                <li><a href="{{ url('/login') }}">Tienda</a></li>
             </ul>
         </nav>
     </header>

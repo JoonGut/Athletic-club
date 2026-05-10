@@ -35,4 +35,8 @@ return [
         ],
     ],
 
+    'football_data' => [
+        'token' => env('FOOTBALL_DATA_TOKEN'),
+    ],
+
 ];

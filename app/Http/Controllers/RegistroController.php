@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Schema;
@@ -66,7 +67,36 @@ class RegistroController extends Controller
 
         $request->session()->put('usuario_id', $usuario->id_usuario ?? null);
         $request->session()->put('usuario_email', $usuario->email);
+        // En caso de todo ser correcto redirigimos a la página de miEquipo con un mensaje de éxito.
+        return redirect()->route('mi.equipo')->with('success', 'Sesión iniciada correctamente');
+    }
 
-        return redirect('/')->with('success', 'Sesión iniciada correctamente');
+    public function miEquipo()
+    {
+        $competitionCode = 'PD';
+        $token = config('services.football_data.token');
+
+        $competition = null;
+        $error = null;
+
+        if (empty($token)) {
+            $error = 'No se ha configurado la API key de football-data.';
+        } else {
+            try {
+                $response = Http::withHeaders([
+                    'X-Auth-Token' => $token,
+                ])->get("https://api.football-data.org/v4/competitions/{$competitionCode}");
+
+                if ($response->successful()) {
+                    $competition = $response->json();
+                } else {
+                    $error = 'No se pudo cargar la competición. Código: ' . $response->status();
+                }
+            } catch (\Throwable $exception) {
+                $error = 'Error al conectar con football-data.';
+            }
+        }
+
+        return view('miEquipo', compact('competition', 'error'));
     }
 }
